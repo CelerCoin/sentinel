@@ -33,7 +33,7 @@ Make sure Python version 2.7.x or above is installed:
 Update system packages and ensure virtualenv is installed:
 
     $ sudo apt-get update
-    $ sudo apt-get -y install python-virtualenv virtualenv
+    $ sudo apt-get -y install python-virtualenv python-pip virtualenv
 
 Make sure the local Celer daemon running is at least version 7.1 (70102)
 
