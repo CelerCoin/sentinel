@@ -125,7 +125,7 @@ Run:
 
 Add the following line below to the end of the file:
 
-    * * * * * cd /home/YOURUSERNAME/.celercore/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+    * * * * * cd /home/YOURUSERNAME/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
     
 
 Make sure you:
