@@ -37,7 +37,7 @@ Update system packages and ensure virtualenv is installed:
 
 Make sure the local Celer daemon running is at least version 7.1 (70100)
 
-    $ celer-cli getinfo | grep version
+    $ ./celer-cli getinfo | grep version
 
 ### 2. Install Sentinel
 
