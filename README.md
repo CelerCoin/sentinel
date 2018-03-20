@@ -35,7 +35,7 @@ Update system packages and ensure virtualenv is installed:
     $ sudo apt-get update
     $ sudo apt-get -y install python-virtualenv
 
-Make sure the local Celer daemon running is at least version 7.1 (70100)
+Make sure the local Celer daemon running is at least version 7.1 (70102)
 
     $ ./celer-cli getinfo | grep version
 
