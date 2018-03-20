@@ -11,15 +11,15 @@ This guide covers installing Sentinel onto an existing 7.1 Masternode in Ubuntu 
 Follow the simple step-by-step guide below. Before you proceed it is advisable to restart your masternode with -reindex to make sure you start off the steps fresh and fully synced - it will save you time later on in the guide as well.
 
 
-    ./celer-cli stop
+    $ ./celer-cli stop
 
-    cd ~/.celercore   // Adjust according to your root Celer directory path
+    $ cd ~/.celercore   // Adjust according to your root Celer directory path
 
-    rm mncache.dat mnpayments.dat
+    $ rm mncache.dat mnpayments.dat
 
-    cd..
+    $ cd ..
 
-    ./celerd -daemon -reindex
+    $ ./celerd -daemon -reindex
 
 
 ## Installation
@@ -72,8 +72,8 @@ If the wallet has been resynched already, you will see no output which is what y
 
 Go back into your root Celer directory, then check the status of your sync:
 
-    cd .. 
-    ./celer-cli mnsync status
+    $ cd .. 
+    $ watch ./celer-cli mnsync status
 
 
 This is what you’re waiting to see:
@@ -92,7 +92,7 @@ AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./celer-cli mnsy
     “IsFailed”: false
     }
     
-At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral.
+At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral. You can stop watch by press Ctrl+Z on Windows or CONTROL+Z on macOS.
 
 
 ## 5. Start Your Masternode
@@ -107,11 +107,11 @@ At this point, your remote masternode is synchronized and chatting with the netw
 
 You’re needed back in Sentinel directory:
 
-    cd sentinel
+    $ cd sentinel
 
 Run:
 
-    venv/bin/python bin/sentinel.py
+    $ venv/bin/python bin/sentinel.py
 
 It should return no output if everything is working correctly. This is how you know it’s working, and your masternode and sentinel setup is properly configured.
 
@@ -119,7 +119,7 @@ It should return no output if everything is working correctly. This is how you k
 
 Run:
 
-    crontab -e
+    $ crontab -e
 
 Add the following line below to the end of the file:
 
@@ -137,11 +137,11 @@ Save and exit.
 
 Go back into your Celer root directory:
 
-    cd ..
+    $ cd ..
 
 Run:
 
-    ./celer-cli masternode debug
+    $ ./celer-cli masternode debug
 
 You should see the message “Masternode successfully started.”. If you have followed all the steps outlined in the guide accurately and achieved this result - this is it, you've made it. Congratulations!
 
